@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>商品价格指数异常检测系统</title>
+  <script type='text/javascript' src="lib\d3.v4.min.js"></script>
+  <script type='text/javascript' src="build\d3-bubbletreemap.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="js/popper1.15.0.min.js"></script>
+  <script src="lib\jquery-1.11.0.min.js"></script>
+  <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="lib\sylvester.js"></script>
+  <script type="text/javascript" src="lib\echarts.min.js"></script>
+  <link rel="stylesheet" href="css\index.css" type="text/css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css\jquery-ui.theme.min.css">
+  <link href="css\tabulator.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="ztreecss\zTreeStyle\zTreeStyle.css" type="text/css">
+  <script type="text/javascript" src="ztreejs\jquery.ztree.core.min.js"></script>
+  <script type="text/javascript" src="lib\tabulator.min.js"></script>
+  <script src="lib/d3.layout.cloud.js"></script>
+  <script src="JackWeiSlider-master\js\jackwei.slider.js"></script>
+  <link href="css/bootstrap-slider.css" rel="stylesheet">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script> -->
+  <script src="lib/tf.min.js"></script>
+  <script type='text/javascript' src="lib/bootstrap-slider.js"></script>
+  <script src="lib/d3-heatmap2.js"></script>
+
+</head>
+
+
+<body>
+  <!-- 最左侧三张图 -->
+  <div id='left'>
+    <!-- 左侧控制台 -->
+    <div id='left1'>
+      <div id="name">
+        <div class="text">
+          <p>Data Overview</p>
+        </div>
+      </div>
+      <div id='left1body'>
+        <p id='daa' class="dv"><span id='tit11'></span><span id='da1'></span></p>
+        <p id='daa' class="dv"><span id='tit12'></span><span id='da2'></span></p>
+        <p id='daa' class="dv"><span id='tit13'></span><span id='da3'></span></p>
+        <p id='daa' class="dv"><span id='tit14'></span><span id='da4'></span><button id='upload'>Load Data</button></p>
+      </div>
+    </div>
+    <!-- 控制台 -->
+    <div id="left2">
+      <div id="name">
+        <div class="text">
+          <p style="display: inline-block;">Control Panel</p>
+          <button type="button" id="ok" class="btn btn-default"
+            style="font-size: 12px;margin:0px 0px 0px 110px;padding:0px 0px 2px 0px;outline: none;display: inline-block;background-color: transparent;border-width: 0px ;">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      <div id='left2body'>
+        <p id='daa1' class="dv"><span id='tit23'>Date:</span>
+        <div class="dropdown">
+          <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="yy" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true" style="padding: 0px 5px;">
+            2019
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a id="yyy">2018</a></li>
+            <li><a id="yyy">2019</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="mm" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true" style="padding: 0px 5px;">
+            Jan
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a id="mmm">Dec</a></li>
+            <li><a id="mmm">Jan</a></li>
+            <li><a id="mmm">Feb</a></li>
+            <li><a id="mmm">Mar</a></li>
+            <li><a id="mmm">Apr</a></li>
+            <li><a id="mmm">May</a></li>
+            <li><a id="mmm">Jun</a></li>
+            <li><a id="mmm">Jul</a></li>
+            <li><a id="mmm">Aug</a></li>
+            <li><a id="mmm">Sep</a></li>
+            <li><a id="mmm">Oct</a></li>
+            <li><a id="mmm">Nov</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dd" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true" style="padding: 0px 5px;">
+            18
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a id="ddd">01</a></li>
+            <li><a id="ddd">02</a></li>
+            <li><a id="ddd">03</a></li>
+            <li><a id="ddd">04</a></li>
+            <li><a id="ddd">05</a></li>
+            <li><a id="ddd">06</a></li>
+            <li><a id="ddd">07</a></li>
+            <li><a id="ddd">08</a></li>
+            <li><a id="ddd">09</a></li>
+            <li><a id="ddd">10</a></li>
+            <li><a id="ddd">11</a></li>
+            <li><a id="ddd">12</a></li>
+            <li><a id="ddd">13</a></li>
+            <li><a id="ddd">14</a></li>
+            <li><a id="ddd">15</a></li>
+            <li><a id="ddd">16</a></li>
+            <li><a id="ddd">17</a></li>
+            <li><a id="ddd">18</a></li>
+            <li><a id="ddd">19</a></li>
+            <li><a id="ddd">20</a></li>
+            <li><a id="ddd">21</a></li>
+            <li><a id="ddd">22</a></li>
+            <li><a id="ddd">23</a></li>
+            <li><a id="ddd">24</a></li>
+            <li><a id="ddd">25</a></li>
+            <li><a id="ddd">26</a></li>
+            <li><a id="ddd">27</a></li>
+            <li><a id="ddd">28</a></li>
+            <li><a id="ddd">29</a></li>
+            <li><a id="ddd">30</a></li>
+            </li>
+            <li><a id="ddd">31</a></li>
+          </ul>
+        </div>
+        </p>
+
+        <p id='daa1' class="dv"><span id='tit22'>Index:</span>
+        <div class="dropdown">
+          <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true" style="padding: 0px 5px;">
+            Fixed Base
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a>Fixed Base</a></li>
+            <li><a>Chain</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true" style="padding: 0px 5px;">
+            Day
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a>Day</a></li>
+            <li><a>Week</a></li>
+            <li><a>Month</a></li>
+            <li><a>Year</a></li>
+          </ul>
+        </div>
+        </p>
+        <p id='daa1' class="dv"><span id='tit24'>MAE:</span>
+          <input type="text" class="span2" data-slider-value="95" data-slider-id="RC" id="ex8"
+            data-slider-tooltip="hide" data-slider-handle="round" />
+          <input id="mae" class="form-control"><span style="color:#778899">%</span>
+        </p>
+        <p id='daa1' class="dv"><span id='tit21'>Anomaly Display:</span>
+        <div class="btn-group" id="IT3">
+          <button type="button" class="btn btn-default" id="on"
+            style="font-size: 12px;padding:0px 5px;outline: none;">On</button>
+          <button type="button" class="btn btn-default active" id="off"
+            style="font-size: 12px;padding:0px 5px;outline: none;">Off</button>
+        </div>
+        </p>
+      </div>
+    </div>
+    <!-- 树状图 -->
+    <div id="left3">
+      <div id="name">
+        <div class="text">
+          <p>Hierarchy View</p>
+        </div>
+      </div>
+      <div id='left3body'>
+        <!-- <p><span id='cn'>Current Product:</span></p> -->
+
+      </div>
+    </div>
+  </div>
+  <!-- 右侧四张图 -->
+  <div id='right'>
+    <!-- 右上侧 -->
+    <div id='right1'>
+      <div id='right11'>
+        <div id="name">
+          <div class="text">
+            <p style="display: inline-block;">Index View</p>
+            <!-- 上侧的控制按钮 -->
+            <button type="button" id="undo" class="btn btn-default"
+              style="font-size: 12px;margin:0px 20px 0px 705px;padding:0px 0px 0px 0px;outline: none;display: inline-block;background-color: transparent;border-width: 0px ;">
+              <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+            </button>
+            <button type="button" id="redo" class="btn btn-default"
+              style="font-size: 12px;margin:0px 20px 0px 0px;padding:0px 0px 2px 0px;outline: none;display: inline-block;background-color: transparent;border-width: 0px ;">
+              <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+            </button>
+            <button type="button" id="sort" class="btn btn-default"
+              style="font-size: 12px;margin:0px 20px 0px 0px;padding:0px 0px 2px 0px;outline: none;display: inline-block;background-color: transparent;border-width: 0px ;">
+              <span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span>
+            </button>
+            <button type="button" id="init" class="btn btn-default"
+              style="font-size: 12px;margin:0px 0px 0px 0px;padding:0px 0px 2px 0px;outline: none;display: inline-block;background-color: transparent;border-width: 0px ;">
+              <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+            </button>
+          </div>
+          <!-- 显示不出来的部分 -->
+          <div id='bb'>
+            <div id="bg">
+              <ul id="mn">
+                <li id="mns">select</li>
+                <li id="mnd">back</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 堆叠图主体部分 -->
+        <div id='right11head'>
+        </div>
+        <div id='right11body'>
+        </div>
+
+      </div>
+
+      <!-- 右侧展示商品信息的部分 -->
+      <div id='right12'>
+        <div id="name">
+          <div class="text">
+            <p style="display: inline-block;">Optimization View</p>
+            <button type="button" id="app" class="btn btn-default"
+              style="font-size: 12px;margin:0px 20px 0px 60px;padding:0px 0px 2px 0px;outline: none;display: inline-block;background-color: transparent;border-width: 0px ;">
+              <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            </button>
+            <button type="button" id="can" class="btn btn-default"
+              style="font-size: 12px;margin:0px 20px 0px 0px;padding:0px 0px 2px 0px;outline: none;display: inline-block;background-color: transparent;border-width: 0px ;">
+              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </button>
+            <button type="button" id="show" class="btn btn-default"
+              style="font-size: 12px;margin:0px 20px 0px 0px;padding:0px 0px 2px 0px;outline: none;display: inline-block;background-color: transparent;border-width: 0px ;">
+              <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+            </button>
+            <button type="button" id="cg" class="btn btn-default"
+              style="font-size: 12px;margin:0px 0px 0px 0px;padding:0px 0px 2px 0px;outline: none;display: inline-block;background-color: transparent;border-width: 0px ;">
+              <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <div id='right12head'>
+
+        </div>
+        <div id='right12body'>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 右侧底部部分 -->
+    <div id="right2">
+      <!-- 异常矩阵图 -->
+      <div id='right21'>
+        <div id="name">
+          <div class="text">
+            <p>Anomaly View</p>
+          </div>
+        </div>
+        <div id='right21head'>
+        </div>
+        <div id='right21body'>
+        </div>
+
+      </div>
+
+      <!-- 右侧的折线图 -->
+      <div id='right22'>
+        <div id="name">
+          <div class="text">
+            <p style="display: inline-block;">Exploration View</p>
+          </div>
+        </div>
+        <div id='right22body'>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+</body>
+
+<script type="text/javascript" src="js\globe.js"></script>
+<script type="text/javascript" src="js\mmain.js"></script>
+<script type="text/javascript" src="js\stackchart.js"></script>
+<script type="text/javascript" src="js\tree.js"></script>
+<script type="text/javascript" src="js\box.js"></script>
+<script type="text/javascript" src="js\pro.js"></script>
+<script type="text/javascript" src="js\tensor.js"></script>
+<script type="text/javascript" src="js\heatmap.js"></script>
+<script type="text/javascript" src="js\lollipop.js"></script>
+<script type="text/javascript" src="js\par.js"></script>
+
+</html>

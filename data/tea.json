@@ -1,0 +1,109 @@
+{
+    "name": "茶","id":0, "children": [
+            {
+                    "name": "绿茶","id":1, "a_attr" : {"style":"color:rgb(237,154,155)"}, "children": [
+                            {
+                                    "name": "名优绿茶","id":2, "a_attr" : {"style":"color:rgb(237,154,155)"},"children": [
+                                            { "name": "邓村绿茶"},
+                                            { "name": "峨眉山茶"},
+                                            { "name": "贵州针"},
+                                            { "name": "汉中仙豪"},
+                                            { "name": "黄山毛峰"},
+                                            { "name": "金坛雀舌"},
+                                            { "name": "卷曲形茶"},
+                                            { "name": "六安瓜片"},
+                                            { "name": "茅山青峰"},
+                                            { "name": "湄潭翠芽"},
+                                            { "name": "湄潭毛峰"},
+                                            { "name": "蒙顶山茶"},
+                                            { "name": "钱塘龙井"},
+                                            { "name": "四川扁形茶"},
+                                            { "name": "松阳扁茶"},
+                                            { "name": "松阳香茶"},
+                                            { "name": "条形茶"},
+                                            { "name": "信阳毛尖"},
+                                            { "name": "永川秀芽"},
+                                            { "name": "越州龙井"}
+                                    ]
+                            },
+                            {
+                                    "name": "大宗绿茶","id":5,"a_attr" : {"style":"color:rgb(237,154,155)"}, "children": [
+                                            { "name": "炒青绿茶"},
+                                            { "name": "烘青绿茶"}
+                                    ]
+                            }
+                    ]
+            },
+            {
+                    "name": "红茶","id":10,"a_attr" : {"style":"color:rgb(155,199,149)"}, "children": [
+                            {
+                                    "name": "工夫红茶","id":11,"a_attr" : {"style":"color:rgb(155,199,149)"}, "children": [
+                                            { "name": "川红工夫"},
+                                            { "name": "昭平红"},
+                                            { "name": "遵义红"}
+                                    ]
+                            },
+                            {
+                                    "name": "小种红茶","id":17,"a_attr" : {"style":"color:rgb(155,199,149)"}, "children": [
+                                            { "name": "松阳红茶"}
+                                    ]
+                            }
+                            
+                    ]
+            },
+            {
+                    "name": "乌龙茶","id":26,"a_attr" : {"style":"color:rgb(207,175,199)"}, "children": [
+                            {
+                                    "name": "闽南乌龙","id":27,"a_attr" : {"style":"color:rgb(207,175,199)"}, "children": [
+                                            { "name": "安溪铁观音"},
+                                            { "name": "黄金桂"}
+                                    ]
+                            }
+                    ]
+            },
+            {
+                    "name": "黑茶","id":31,"a_attr" : {"style":"color:rgb(244,223,146)"}, "children": [
+                            {
+                                    "name": "安化黑茶","id":32,"a_attr" : {"style":"color:rgb(244,223,146)"}, "children": [
+                                            { "name": "茯砖"},
+                                            { "name": "黑砖"},
+                                            { "name": "千两"},
+                                            { "name": "三尖"}
+                                    ]
+                            },
+                            {
+                                    "name": "四川黑茶","id":34,"a_attr" : {"style":"color:rgb(244,223,146)"}, "children": [
+                                            { "name": "康砖"}
+                                    ]
+                            }
+                    ]
+            },
+            {
+                    "name": "白茶","id":38,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                            {
+                                    "name": "白毫银针","id":39,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                            { "name": "白毫银针"}
+                                    ]
+                            }
+                    ]
+            },
+            {
+                "name": "黄茶","id":38,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                        {
+                                "name": "黄芽茶","id":39,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                        { "name": "蒙顶黄芽"}
+                                ]
+                        }
+                ]
+        },
+        {
+            "name": "花茶","id":38,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                    {
+                            "name": "茉莉花茶","id":39,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                    { "name": "四川茉莉花茶"}
+                            ]
+                    }
+            ]
+    }
+    ]
+}

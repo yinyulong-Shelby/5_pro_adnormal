@@ -1,0 +1,126 @@
+{
+        "name": "Generality","id":0, "children": [
+                {
+                        "name": "Meat","id":1, "a_attr" : {"style":"color:rgb(237,154,155)"}, "children": [
+                                {
+                                        "name": "Pork","id":2, "a_attr" : {"style":"color:rgb(237,154,155)"},"children": [
+                                                { "name": "Pork Lean","a_attr" : {"style":"color:rgb(237,154,155)"},"id":3 },
+                                                { "name": "Pork Rib","a_attr" : {"style":"color:rgb(237,154,155)"},"id":4 }
+                                        ]
+                                },
+                                {
+                                        "name": "Beef","id":5,"a_attr" : {"style":"color:rgb(237,154,155)"}, "children": [
+                                                { "name": "Beef","a_attr" : {"style":"color:rgb(237,154,155)"},"id":6 }
+                                        ]
+                                }
+                        ]
+                },
+                {
+                        "name": "Aquatic Product","id":10,"a_attr" : {"style":"color:rgb(155,199,149)"}, "children": [
+                                {
+                                        "name": "Fish","id":11,"a_attr" : {"style":"color:rgb(155,199,149)"}, "children": [
+                                                { "name": "Silver Carp","a_attr" : {"style":"color:rgb(155,199,149)"},"id":12 },
+                                                { "name": "Grass Carp","a_attr" : {"style":"color:rgb(155,199,149)"},"id":13 }
+                                        ]
+                                },
+                                {
+                                        "name": "Shrimp","id":17,"a_attr" : {"style":"color:rgb(155,199,149)"}, "children": [
+                                                { "name": "River Shrimp","a_attr" : {"style":"color:rgb(155,199,149)"},"id":18 }
+                                        ]
+                                }
+                                
+                        ]
+                },
+                {
+                        "name": "Egg","id":26,"a_attr" : {"style":"color:rgb(207,175,199)"}, "children": [
+                                {
+                                        "name": "Chicken Egg","id":27,"a_attr" : {"style":"color:rgb(207,175,199)"}, "children": [
+                                                { "name": "Chicken Egg","a_attr" : {"style":"color:rgb(207,175,199)"},"id":28 }
+                                        ]
+                                },
+                                {
+                                        "name": "Duck Egg","id":29,"a_attr" : {"style":"color:rgb(207,175,199)"}, "children": [
+                                                { "name": "Duck Egg","a_attr" : {"style":"color:rgb(207,175,199)"},"id":30 }
+                                        ]
+                                }
+                        ]
+                },
+                {
+                        "name": "Bean Product","id":31,"a_attr" : {"style":"color:rgb(244,223,146)"}, "children": [
+                                {
+                                        "name": "Bean Curd","id":32,"a_attr" : {"style":"color:rgb(244,223,146)"}, "children": [
+                                                { "name": "Bean Curd","a_attr" : {"style":"color:rgb(244,223,146)"},"id":33 }
+                                        ]
+                                },
+                                {
+                                        "name": "Dried Bean Curd","id":34,"a_attr" : {"style":"color:rgb(244,223,146)"}, "children": [
+                                                { "name": "Dried Bean Curd","a_attr" : {"style":"color:rgb(244,223,146)"},"id":35 }
+                                        ]
+                                }
+                        ]
+                },
+                {
+                        "name": "Vegetable","id":38,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                {
+                                        "name": "Leafy Vegetable","id":39,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                                { "name": "Celery","a_attr" : {"style":"color:rgb(149,175,202)"},"id":40 },
+                                                { "name": "Pakchoi","a_attr" : {"style":"color:rgb(149,175,202)"},"id":41 },
+                                                { "name": "Chinese Cabbage","a_attr" : {"style":"color:rgb(149,175,202)"},"id":42 },
+                                                { "name": "Greens","a_attr" : {"style":"color:rgb(149,175,202)"},"id":43 },
+                                                { "name": "Spinach","a_attr" : {"style":"color:rgb(149,175,202)"},"id":44 }
+                                        ]
+                                },
+                                {
+                                        "name": "Gourd Vegetable","id":47,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                                { "name": "Cucumber","a_attr" : {"style":"color:rgb(149,175,202)"},"id":48 },
+                                                { "name": "White Gourd","a_attr" : {"style":"color:rgb(149,175,202)"},"id":50 },
+                                                { "name": "Sponge Gourd","a_attr" : {"style":"color:rgb(149,175,202)"},"id":51 }
+                                        ]
+                                },
+                                {
+                                        "name": "Root Vegetable","id":52,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                                { "name": "Turnip","a_attr" : {"style":"color:rgb(149,175,202)"},"id":53 },
+                                                { "name": "Carrot","a_attr" : {"style":"color:rgb(149,175,202)"},"id":54 },
+                                                { "name": "Ginger","a_attr" : {"style":"color:rgb(149,175,202)"},"id":56 },
+                                                { "name": "Potato","a_attr" : {"style":"color:rgb(149,175,202)"},"id":57 }
+                                        ]
+                                },
+                                {
+                                        "name": "Solanaceous vegetable","id":58,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                                { "name": "Eggplant","a_attr" : {"style":"color:rgb(149,175,202)"},"id":59 },
+                                                { "name": "Tomato","a_attr" : {"style":"color:rgb(149,175,202)"},"id":60 },
+                                                { "name": "Bell Pepper","a_attr" : {"style":"color:rgb(149,175,202)"},"id":61 },
+                                                { "name": "Hot Pepper","a_attr" : {"style":"color:rgb(149,175,202)"},"id":62 }
+                                        ]
+                                },
+                                {
+                                        "name": "Bean","id":63,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                                { "name": "Asparagus Bean","a_attr" : {"style":"color:rgb(149,175,202)"},"id":65 }
+                                        ]
+                                },
+                                {
+                                        "name": "Cabbage Vegetable","id":67,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                                { "name": "Cabbage","a_attr" : {"style":"color:rgb(149,175,202)"},"id":68 },
+                                                { "name": "Cauliflower","a_attr" : {"style":"color:rgb(149,175,202)"},"id":69 }
+                                        ]
+                                },
+                                {
+                                        "name": "Bulb Vegetable","id":71,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                                { "name": "Garlic","a_attr" : {"style":"color:rgb(149,175,202)"},"id":72 },
+                                                { "name": "Leek","a_attr" : {"style":"color:rgb(149,175,202)"},"id":75 }
+                                        ]
+                                },
+                                {
+                                        "name": "Lettuce&Chicory","id":76,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                                { "name": "Celtuce","a_attr" : {"style":"color:rgb(149,175,202)"},"id":77 }
+                                        ]
+                                },
+                                {
+                                        "name": "Aquatic Vegetable","id":79,"a_attr" : {"style":"color:rgb(149,175,202)"}, "children": [
+                                                { "name": "Wild Rice Stem","a_attr" : {"style":"color:rgb(149,175,202)"},"id":81 }
+                                        ]
+                                }
+                        ]
+                }
+        ]
+  }
